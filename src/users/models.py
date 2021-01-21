@@ -11,5 +11,5 @@ class Profile(models.Model):
     phone = models.CharField(max_length=100, blank=True)
     bio = models.TextField(max_length=100, blank=True)
 
-    def _str_(self):
-        return f"{self.first_name} {self.last_name}"
+    def __str__(self):
+        return f"{self.user.username}"
